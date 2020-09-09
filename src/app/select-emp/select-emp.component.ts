@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialogRef,MAT_DIALOG_DATA} from '@angular/material';
+
 
 @Component({
   selector: 'app-select-emp',
@@ -11,7 +11,7 @@ export class SelectEmpComponent implements OnInit {
 idleState='Not started.';
 timedOut=false;
 min:any;
-sec:any
+sec:any;
   constructor() { }
 
   ngOnInit() {
