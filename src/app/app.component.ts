@@ -19,13 +19,43 @@ export class AppComponent  {
               { myimage: 'http://atlantablackstar.com/wp-content/uploads/2015/02/Black-businesswoman.jpg', name: "Bogiwe", surname: "Sibuyi", position: "Network Administrator", age: 28 },
               { myimage: 'https://get.pxhere.com/photo/man-person-people-meeting-corporate-professional-business-profession-speaker-elder-official-success-clergy-893119.jpg', name: "William", surname: "Rikhotso", position: "IT Coordinator", age: 45 }];
 
-    delete(todolist)
+       delete(name)
     {
+      var retval = confirm("Do you want to Delete");
+      if (retval == true)
+      {
       const index=this.todolist.indexOf(name);
       if(index>-1)
       {
         this.todolist.splice(index,1);
       }
+  
+      return true;
+    }
+      else
+    {
+      
+      return false;
+    }
+    
+      }
+  
+
+   //udating button
+  update()
+  {
+    var retval = confirm("Do you want to Update?");
+  if (retval == true)
+  {
+   
+    return true;
+  }
+    else
+  {
+    
+    return false;
+  }
+  
     }
 }
 

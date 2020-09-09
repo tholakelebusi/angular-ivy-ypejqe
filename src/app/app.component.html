@@ -1,3 +1,4 @@
+<app-select-emp></app-select-emp>
 <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
@@ -25,8 +26,8 @@
            {{todo.age}}
           </div>
 
-          <button (click)="delete(todo)">Delete</button>
-          <button>Update</button>
+           <button mat-raised-button (click)="delete(todo)">Delete</button>
+          <button (click)="update()">Update</button>
     
 </div>
 </div>
