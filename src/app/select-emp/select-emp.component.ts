@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { Component, OnInit,Inject } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+
+export interface DialogData {
+  animal: 'panda' | 'unicorn' | 'lion';
+}
 
 @Component({
   selector: 'app-select-emp',
@@ -14,10 +19,22 @@ export class SelectEmpComponent implements OnInit {
 
  openDialog() {
     this.dialog.open(SelectEmpComponent);
+     data: {
+        animal: 'panda'
+      }
   }
   ngOnInit() {
   }
 
+}
+
+
+@Component({
+ selector: 'app-select-emp',
+  templateUrl: './select-emp.component.html',
+})
+export class SelectEmpComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 }
 
 

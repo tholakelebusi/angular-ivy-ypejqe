@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { DialogComponent } from './dialog/dialog.component';
 import { SelectEmpComponent } from './select-emp/select-emp.component';
